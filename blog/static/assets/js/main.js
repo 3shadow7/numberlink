@@ -5,6 +5,228 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+// Function to delete the element
+// Function to delete the element
+// Function to delete the element
+function deleteDarkModeStyle() {
+  var elements = document.querySelectorAll('style.dark-mode-native-dark-cloned');
+  elements.forEach(function(element) {
+    element.remove();
+  });
+}
+
+// Mutation Observer to watch for changes in the DOM
+var observer = new MutationObserver(function(mutationsList) {
+  for (var mutation of mutationsList) {
+    if (mutation.type === 'childList') {
+      deleteDarkModeStyle();
+    }
+  }
+});
+
+// Start observing the DOM
+observer.observe(document.body, { childList: true, subtree: true });
+
+
+function toggleFullscreen() {
+  const doc = window.document;
+  const docEl = doc.documentElement;
+
+  const requestFullscreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  const exitFullscreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+  if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    requestFullscreen.call(docEl);
+  } else {
+    exitFullscreen.call(doc);
+  }
+}
+
+// Toggle fullscreen on page load
+window.onload = toggleFullscreen;
+// Trigger fullscreen on button click or any other event
+const fullscreenButton = document.getElementById('fullscreenButton');
+fullscreenButton.addEventListener('click', toggleFullscreen);
+
+function fullscreen() {
+  var elem = document.getElementsByClassName("fullscreen-icon")[0];
+  if (elem.classList[1] === "ri-fullscreen-line" ){
+  elem.classList.remove("ri-fullscreen-line");
+  elem.classList.add("ri-fullscreen-exit-line");
+  } else if (elem.classList[1] === "ri-fullscreen-exit-line"){
+    elem.classList.remove("ri-fullscreen-exit-line");
+    elem.classList.add("ri-fullscreen-line");
+  }
+}
+
+function read1() {
+  var readText = document.getElementById("read1");
+  var btnText = document.getElementById("myBtn1");
+
+  if (readText.style.display === "none") {
+    btnText.innerHTML = "Read read"; 
+    readText.style.display = "none";
+  } else {
+    btnText.remove();
+    readText.style.display = "inline";
+  }
+}
+
+function read2() {
+  var readText = document.getElementById("read2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (readText.style.display === "none") {
+    btnText.innerHTML = "Read read"; 
+    readText.style.display = "none";
+  } else {
+    btnText.remove();
+    readText.style.display = "inline";
+  }
+}
+
+function read3() {
+  var readText = document.getElementById("read3");
+  var btnText = document.getElementById("myBtn3");
+
+  if (readText.style.display === "none") {
+    btnText.innerHTML = "Read read"; 
+    readText.style.display = "none";
+  } else {
+    btnText.remove();
+    readText.style.display = "inline";
+  }
+}
+
+function read4() {
+  var readText = document.getElementById("read4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (readText.style.display === "none") {
+    btnText.innerHTML = "Read read"; 
+    readText.style.display = "none";
+  } else {
+    btnText.remove();
+    readText.style.display = "inline";
+  }
+}
+
+
+function myFunction1() {
+  var moreText = document.getElementById("more1");
+  var btnText = document.getElementById("Btn1");
+
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    btnText.remove();
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction2() {
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("Btn2");
+
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    btnText.remove();
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction3() {
+  var moreText = document.getElementById("more3");
+  var btnText = document.getElementById("Btn3");
+
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    btnText.remove();
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction4() {
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("Btn4");
+
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    btnText.remove();
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myFunction5() {
+  var moreText = document.getElementById("more5");
+  var btnText = document.getElementById("myBtn5");
+
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    btnText.remove();
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction6() {
+  var moreText = document.getElementById("more6");
+  var btnText = document.getElementById("myBtn6");
+
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    btnText.remove();
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction7() {
+  var moreText = document.getElementById("more7");
+  var btnText = document.getElementById("myBtn7");
+
+  if (moreText.style.display === "none") {
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    btnText.remove();
+    moreText.style.display = "inline";
+  }
+}
+
+function tosupport(){
+  let element0 = document.getElementsByClassName("Flib-Card")[0];
+  let flib_button =  document.getElementsByClassName("checkbox")[0];
+    if (element0.classList[1] !== "rotate") {
+      flib_button.checked = true;
+      rotateElement();
+    }
+  }
+function tocontact(){
+  let element0 = document.getElementsByClassName("Flib-Card")[0];
+  let flib_button =  document.getElementsByClassName("checkbox")[0];
+  if (element0.classList[1] === "rotate") {
+    flib_button.checked = false;
+    rotateElement();
+  }
+};
+
+function rotateElement() {
+  var flipcard = document.getElementsByClassName("Flib-Card")[0];
+  flipcard.classList.toggle("rotate");
+  }
+
+
 (function() {
   "use strict";
 
